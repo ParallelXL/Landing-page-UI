@@ -1,39 +1,28 @@
-<<<<<<< HEAD
-@import url("https://fonts.googleapis.com/css2?family=Foldit:wght@200&family=Lato:wght@300&family=Macondo&family=Oswald:wght@300&family=PT+Sans+Narrow&family=Roboto+Condensed:ital@1&family=Roboto:wght@300&family=Urbanist:ital,wght@0,300;0,400;1,100&display=swap");
-
-html {
-  width: 100%;
-  background: #dbd6d6f3;
-  font-family: "Roboto", sans-serif;
-}
-
-* {
-=======
 /* Poppins font -- Google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 *,
 *::after,
 *::before {
->>>>>>> e8449b048d015a7ad6f5f2bc2c415c2ab82fa960
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  display: block;
 }
 
 html {
+  width: 100%;
+  background: #dbd6d6f3;
   font-size: 62.5%;
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 .page {
   position: relative;
-  top: 3rem;
+  top: 6rem;
   background-color: #fff;
-  height: 35rem;
+  height: 55rem;
   margin: auto;
-  max-width: 80rem;
+  max-width: 90%;
 }
 .icon {
   background-color: #33d62dd5;
@@ -76,6 +65,14 @@ button {
   margin-left: 7px;
 }
 .logo {
-  font-size: small;
-  font-weight: 700px;
+  display: flex;
+}
+.logo img {
+  width: 25px;
+  height: 25px;
+  transform: scale(-1, -1);
+}
+.logo p {
+  font-weight: bold;
+  margin: 0.9rem;
 }
