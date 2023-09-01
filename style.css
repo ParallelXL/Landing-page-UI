@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Foldit:wght@200&family=Lato:wght@300&family=Macondo&family=Oswald:wght@300&family=PT+Sans+Narrow&family=Roboto+Condensed:ital@1&family=Roboto:wght@300&family=Urbanist:ital,wght@0,300;0,400;1,100&display=swap");
 
 html {
@@ -7,9 +8,24 @@ html {
 }
 
 * {
+=======
+/* Poppins font -- Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*,
+*::after,
+*::before {
+>>>>>>> e8449b048d015a7ad6f5f2bc2c415c2ab82fa960
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 .page {
   position: relative;
