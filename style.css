@@ -11,23 +11,13 @@
 }
 
 html {
-  width: 100%;
-  background: #dbd6d6f3;
   font-size: 62.5%;
   font-family: "poppins", Arial, Helvetica, sans-serif;
-}
-.page {
-  position: relative;
-  top: 6rem;
-  background-color: #fff;
-  height: 55rem;
-  margin: auto;
-  max-width: 90%;
 }
 .icon {
   background-color: #33d62dd5;
   border-radius: 50%;
-  padding: 0.3rem;
+  padding: 0.7rem;
 }
 header {
   border-bottom: 1px solid #ddd;
@@ -53,7 +43,24 @@ nav ul li {
   margin-right: 0.3rem;
 }
 nav ul li a {
+  position: relative;
   font-weight: 800;
+  padding-right: 1.5rem;
+}
+nav ul li a::after {
+  right: 0;
+  top: 50%;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #000;
+  transform: translateY(-50%);
+}
+nav ul li .dot::after {
+  display: none;
 }
 nav ul li a:hover {
   text-decoration: underline;
