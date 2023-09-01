@@ -16,11 +16,14 @@ html {
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 
+/* navigation styling */
+
 nav {
-  margin: 1rem 3rem;
+  padding: 1rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px solid #ddd;
 }
 
 .logo {
@@ -51,6 +54,10 @@ nav ul li a {
   font-weight: 500;
   font-size: 1.2rem;
   padding-right: 1.5rem;
+}
+a:hover {
+  color: #cac0c0;
+  transition: all 0.3s ease;
 }
 
 nav ul li a::after {
@@ -93,4 +100,55 @@ button {
 
 button b {
   color: #fff;
+}
+
+/* hero styling */
+.hero {
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
+.left_side {
+  width: 50%;
+}
+.top-text {
+  padding: 6rem;
+  width: 45%;
+  line-height: 2;
+  font-size: 1.5rem;
+}
+.top-text h3 {
+  border-bottom: 2px solid #ddd;
+  font-weight: 800;
+}
+
+.mid-text {
+  margin-top: -5rem;
+  padding-left: 6rem;
+  width: 45%;
+  font-size: 7rem;
+  font-weight: 400;
+}
+
+.bottom-text {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 6rem;
+}
+.bottom-text h3 {
+  font-size: 2rem;
+}
+.bottom-text p {
+  max-width: 95%;
+  font-size: 1.5rem;
+}
+.bottom-text a {
+  line-height: 7;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+.bottom-text i {
+  padding: 1rem;
+  rotate: 50deg;
+  font-size: 1.5rem;
 }
