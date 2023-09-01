@@ -52,6 +52,12 @@ nav ul li {
   margin: 0.7rem;
   margin-right: 0.3rem;
 }
+nav ul li a {
+  font-weight: 800;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
 button {
   border-radius: 30px;
   background-color: #000;
