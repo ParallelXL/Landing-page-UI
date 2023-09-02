@@ -15,7 +15,18 @@ html {
   font-size: 62.5%;
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
-
+header {
+  opacity: 0;
+  transform: translateY(-50%);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* navigation styling */
 
 nav {
