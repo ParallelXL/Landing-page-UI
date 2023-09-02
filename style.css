@@ -15,18 +15,7 @@ html {
   font-size: 62.5%;
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
-header {
-  opacity: 0;
-  transform: translateY(-50%);
-  animation: fadeIn 1s forwards;
-  animation-delay: 0.5s;
-}
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 /* navigation styling */
 
 nav {
@@ -118,13 +107,13 @@ button b {
 /* hero styling */
 
 .hero {
-  margin-top: 5rem;
-  margin-left: 6rem;
+  display: flex;
+  margin: 5rem 6rem;
+  gap: 4rem;
 }
 
-.left_side,
-.right_side {
-  width: 50%;
+.left_side {
+  width: 45%;
 }
 
 .top-text {
@@ -175,4 +164,73 @@ button b {
 .bottom-text i {
   rotate: 45deg;
   font-size: 1.7rem;
+}
+
+/* Hero || Right Image Side Styling */
+
+.right_side {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  /* adding border so we can see what we wroking with */
+  border: 2px solid red;
+  overflow: hidden;
+  height: 80vh;
+}
+
+.left-content {
+  background: url(./assets/person.png), plum;
+  width: 50%;
+  background-size: cover;
+  background-position: top center;
+}
+
+.img-box {
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.left-content .ad-text {
+  border-radius: 14rem 14rem 0 0;
+  background: white;
+}
+
+.right-content {
+  width: 50%;
+}
+
+.right-content .img-box {
+  background-color: cadetblue;
+}
+
+.right-content .ad-text {
+  border-radius: 15rem;
+  background: #33d62dd5;
+}
+
+.ad-text {
+  padding: 2rem 0 4rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ad-text h1 {
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.ad-text p {
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #555;
 }
