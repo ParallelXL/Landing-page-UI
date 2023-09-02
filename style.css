@@ -23,7 +23,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #efefef;
 }
 
 .logo {
@@ -47,6 +47,7 @@ nav ul li {
   display: inline-block;
   margin: 0.7rem;
   margin-right: 0.3rem;
+  cursor: pointer;
 }
 
 nav ul li a {
@@ -55,9 +56,10 @@ nav ul li a {
   font-size: 1.2rem;
   padding-right: 1.5rem;
 }
+
 a:hover {
-  color: #cac0c0;
-  transition: all 0.3s ease;
+  color: #aaa;
+  transition: all 0.5s;
 }
 
 nav ul li a::after {
@@ -103,52 +105,63 @@ button b {
 }
 
 /* hero styling */
+
 .hero {
   margin-top: 5rem;
-  margin-left: 5rem;
+  margin-left: 6rem;
 }
-.left_side {
+
+.left_side,
+.right_side {
   width: 50%;
 }
+
 .top-text {
-  padding: 6rem;
-  width: 45%;
+  margin-top: 6rem;
   line-height: 2;
   font-size: 1.5rem;
 }
+
 .top-text h3 {
-  border-bottom: 2px solid #ddd;
   font-weight: 800;
 }
 
-.mid-text {
-  margin-top: -5rem;
-  padding-left: 6rem;
-  width: 45%;
-  font-size: 7rem;
-  font-weight: 400;
+.top-text p {
+  border-top: 2px solid #eee;
+  width: fit-content;
+}
+
+.mid-text h3 {
+  margin-top: 1rem;
+  font-size: 8rem;
+  font-weight: 600;
 }
 
 .bottom-text {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 6rem;
+  margin-top: 3rem;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
 }
+
 .bottom-text h3 {
   font-size: 2rem;
 }
+
 .bottom-text p {
-  max-width: 95%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  color: #555;
+  margin: 0.5rem 0 2rem 0;
 }
+
 .bottom-text a {
-  line-height: 7;
   font-weight: bold;
   font-size: 1.3rem;
-  text-decoration: underline;
+  display: flex;
+  align-items: center;
 }
+
 .bottom-text i {
-  padding: 1rem;
-  rotate: 50deg;
-  font-size: 1.5rem;
+  rotate: 45deg;
+  font-size: 1.7rem;
 }
