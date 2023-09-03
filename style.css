@@ -130,7 +130,30 @@ button b {
 .left_side {
   width: 45%;
 }
+/* left side animation */
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 5rem 1rem 3rem;
+  overflow: hidden;
+  animation: spin 10s linear infinite;
+}
+.spin div {
+  width: 0.7px;
+  background-color: #000;
+  height: 100%;
+}
 .top-text {
   margin-top: 6rem;
   line-height: 2;
@@ -190,6 +213,22 @@ button b {
   height: 500px;
   position: relative;
 }
+@keyframes round {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 120px;
+  }
+}
+@keyframes round2 {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 999px;
+  }
+}
 
 .left-content {
   width: 50%;
@@ -201,7 +240,7 @@ button b {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
-
+  animation: round 4s forwards;
   border-radius: 120px;
 }
 
@@ -210,6 +249,7 @@ button b {
   width: 100%;
   background: #fafafa;
   border-radius: 999px;
+  animation: round2 5s forwards;
 }
 
 .right-content {
@@ -228,6 +268,7 @@ button b {
   padding: 1rem 3rem;
   background-color: var(--primary-blue);
   border-radius: 120px;
+  animation: round 4.5s forwards;
   overflow: hidden;
 }
 
@@ -241,6 +282,7 @@ button b {
   height: 40%;
   background: var(--primary-green);
   border-radius: 999px;
+  animation: round2 5s forwards;
 }
 
 .text {
