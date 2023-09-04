@@ -290,3 +290,23 @@ button b {
   font-size: 1.4rem;
   color: var(--grey);
 }
+
+/* footer styling */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2.5px solid var(--white-slate);
+  padding: 0.7rem;
+}
+.brand {
+  display: flex;
+  margin: 7rem;
+}
+.brand i {
+  font-size: 3rem;
+}
+.brand h1 {
+  opacity: 0.9;
+  font-size: 2rem;
+}
