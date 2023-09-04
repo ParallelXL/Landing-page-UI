@@ -11,13 +11,6 @@
   color: black;
 }
 
-/* COLORS */
-/* #d3f277 */
-/* #aa377a */
-/* #2632eb */
-
-/* Download the color highlight extension to see the colors please */
-
 html {
   font-size: 62.5%;
   font-family: "poppins", Arial, Helvetica, sans-serif;
@@ -32,6 +25,14 @@ html {
 }
 
 /* navigation styling */
+@keyframes navAnimation {
+  from {
+    transform: translateY(-105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
 nav {
   padding: 1rem 3rem;
@@ -39,6 +40,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid var(--white-slate);
+  animation: navAnimation 0.8s 1s ease-out forwards;
+  transform: translateY(-105%);
 }
 
 .logo {
@@ -130,30 +133,7 @@ button b {
 .left_side {
   width: 45%;
 }
-/* left side animation */
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.spin {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 0 5rem 1rem 3rem;
-  overflow: hidden;
-  animation: spin 10s linear infinite;
-}
-.spin div {
-  width: 0.7px;
-  background-color: #000;
-  height: 100%;
-}
 .top-text {
   margin-top: 6rem;
   line-height: 2;
@@ -213,20 +193,29 @@ button b {
   height: 500px;
   position: relative;
 }
-@keyframes round {
+
+@keyframes roundFull {
   from {
     border-radius: 0;
+  }
+  to {
+    border-radius: 200px;
+  }
+}
+@keyframes round110 {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 110px;
+  }
+}
+@keyframes round3 {
+  from {
+    border-radius: 0 0 120px 120px;
   }
   to {
     border-radius: 120px;
-  }
-}
-@keyframes round2 {
-  from {
-    border-radius: 0;
-  }
-  to {
-    border-radius: 999px;
   }
 }
 
@@ -240,16 +229,15 @@ button b {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
-  animation: round 4s forwards;
-  border-radius: 120px;
+  animation: round3 1s 1s forwards;
+  border-radius: 0 0 120px 120px;
 }
 
 .left-content .text {
   padding: 4rem 0;
   width: 100%;
   background: #fafafa;
-  border-radius: 999px;
-  animation: round2 5s forwards;
+  animation: roundFull 2s 0.5s forwards;
 }
 
 .right-content {
@@ -267,8 +255,7 @@ button b {
   height: 80%;
   padding: 1rem 3rem;
   background-color: var(--primary-blue);
-  border-radius: 120px;
-  animation: round 4.5s forwards;
+  animation: round110 1s 1s forwards;
   overflow: hidden;
 }
 
@@ -282,7 +269,7 @@ button b {
   height: 40%;
   background: var(--primary-green);
   border-radius: 999px;
-  animation: round2 5s forwards;
+  animation: round2 1s 1.5s forwards;
 }
 
 .text {
@@ -302,4 +289,9 @@ button b {
   font-weight: 500;
   font-size: 1.4rem;
   color: var(--grey);
+}
+
+/* footer styling */
+footer{
+  df
 }
