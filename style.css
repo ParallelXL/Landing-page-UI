@@ -35,6 +35,7 @@ html {
 }
 
 nav {
+  position: relative;
   padding: 1rem 3rem;
   display: flex;
   align-items: center;
@@ -42,6 +43,10 @@ nav {
   border-bottom: 2px solid var(--white-slate);
   animation: navAnimation 0.8s 1s ease-out forwards;
   transform: translateY(-105%);
+}
+
+nav .nav-mobile {
+  display: none;
 }
 
 .logo {
@@ -73,6 +78,9 @@ nav ul li a {
   font-weight: 500;
   font-size: 1.2rem;
   padding-right: 1.5rem;
+}
+nav .menu {
+  display: none;
 }
 
 a:hover {
@@ -299,14 +307,37 @@ footer {
   border-top: 2.5px solid var(--white-slate);
   padding: 0.7rem;
 }
+
 .brand {
   display: flex;
   margin: 7rem;
 }
+
 .brand i {
   font-size: 3rem;
 }
+
 .brand h1 {
   opacity: 0.9;
   font-size: 2rem;
+}
+
+/* responsive web styling */
+@media screen and (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+  .right-nav {
+    display: none;
+  }
+  nav .nav-mobile {
+    display: flex;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+  }
 }

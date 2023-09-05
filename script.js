@@ -1,9 +1,4 @@
 "use strict";
 
-const numeber = (str) => {
-  const greet = "str";
-  console.log(greet);
-};
-numeber("helloworld");
-
-// Just testing not much here
+const navMobile = document.querySelector(".nav-mobile");
+const menuIcon = document.querySelector(".menu");
