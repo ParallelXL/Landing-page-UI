@@ -406,7 +406,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    right: -100%;
+    opacity: 0;
     top: 0;
     height: 100vh;
     width: 100vw;
@@ -416,6 +416,7 @@ footer {
   }
 
   nav .nav-mobile.active {
+    opacity: 1;
     right: 0;
   }
 
@@ -428,6 +429,9 @@ footer {
 
   nav .nav-mobile li a {
     font-size: 2rem;
+  }
+  nav .nav-mobile .right-nav {
+    padding: 4rem;
   }
 
   /*  */
