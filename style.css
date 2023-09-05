@@ -24,6 +24,10 @@ html {
   --grey: #555;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* navigation styling */
 @keyframes navAnimation {
   from {
@@ -66,10 +70,15 @@ nav .nav-mobile {
   font-weight: bold;
 }
 
-nav ul li {
+a,
+li {
+  display: block;
+}
+
+nav > ul li {
   display: inline-block;
-  margin: 0.7rem;
-  margin-right: 0.3rem;
+  margin: 0.5rem;
+  margin-right: 0.2rem;
   cursor: pointer;
 }
 
@@ -79,8 +88,12 @@ nav ul li a {
   font-size: 1.2rem;
   padding-right: 1.5rem;
 }
+
 nav .menu {
   display: none;
+  z-index: 999;
+  font-size: 3rem;
+  margin-right: 1rem;
 }
 
 a:hover {
@@ -106,13 +119,14 @@ nav ul li .dot::after {
 }
 
 .right-nav a {
+  display: inline-block;
   font-size: 1.2rem;
 }
 
 .icon {
   background-color: var(--primary-green);
   border-radius: 50%;
-  padding: 0.7rem;
+  padding: 0.5rem;
   font-size: 1.2rem;
   margin: 0 1rem 0 0.6rem;
 }
@@ -134,7 +148,8 @@ button b {
 
 .hero {
   display: flex;
-  margin: 5rem 6rem;
+  width: 90%;
+  margin: 5rem auto;
   gap: 4rem;
 }
 
@@ -299,18 +314,23 @@ button b {
   color: var(--grey);
 }
 
-/* footer styling */
+/* Footer styling */
+
 footer {
+  width: 92%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-top: 2.5px solid var(--white-slate);
-  padding: 0.7rem;
+  padding: 5rem 0;
+  margin: 0 auto;
+  gap: 4rem;
 }
 
 .brand {
   display: flex;
-  margin: 7rem;
+  align-items: center;
+  gap: 1rem;
 }
 
 .brand i {
@@ -324,20 +344,65 @@ footer {
 
 /* responsive web styling */
 @media screen and (max-width: 900px) {
-  nav ul {
+  nav {
+    animation-duration: 0.3s;
+    animation-delay: 0;
+    padding: 1rem 0;
+  }
+
+  nav > ul,
+  nav > .right-nav {
     display: none;
   }
-  .right-nav {
-    display: none;
+
+  nav .menu {
+    display: block;
   }
+
   nav .nav-mobile {
+    position: fixed;
     display: flex;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--white);
+    transition: 0.5s;
+    z-index: 10;
+  }
+
+  nav .nav-mobile.active {
+    right: 0;
+  }
+
+  nav .nav-mobile ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  nav .nav-mobile li a {
+    font-size: 2rem;
+  }
+
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  footer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero > * {
+    width: 100%;
   }
 }
