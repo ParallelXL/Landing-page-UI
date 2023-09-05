@@ -8,3 +8,11 @@ menuIcon.addEventListener("click", (e) => {
   navMobile.classList.toggle("active");
   menuIcon.classList.toggle("active");
 });
+
+const switchBtn = document.querySelector(".switch");
+const toggler = document.getElementById("toggler");
+let darkMode = 0;
+
+switchBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
