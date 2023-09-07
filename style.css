@@ -402,7 +402,7 @@ button b {
 .text p {
   font-weight: 500;
   font-size: 1.4rem;
-  color: var(--grey);
+  color: #000;
 }
 
 /* Footer styling */
