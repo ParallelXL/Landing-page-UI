@@ -279,6 +279,7 @@ button b {
   align-items: center;
   height: 500px;
   position: relative;
+  z-index: -1;
 }
 
 @keyframes roundFull {
