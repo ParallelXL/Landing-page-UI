@@ -88,6 +88,9 @@ nav .nav-mobile {
   font-size: 2rem;
   cursor: pointer;
 }
+.bx-sun {
+  display: none;
+}
 
 a,
 li,
@@ -265,6 +268,7 @@ button b {
 .bottom-text i {
   rotate: 45deg;
   font-size: 1.7rem;
+  z-index: -1;
 }
 
 /* Hero || Right Image Side Styling */
