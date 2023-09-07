@@ -23,6 +23,8 @@ html {
   --grey: #555;
 
   --background: #fff;
+  --filter: invert(0%);
+  --webkit-filter: invert(0%);
 }
 
 body {
@@ -34,8 +36,10 @@ body.dark {
   --white: #000;
   --black: #fff;
   --white-slate: #333;
-
+  --grey: #ddd;
   --background: #040d12;
+  --filter: invert(100%);
+  --webkit-filter: invert(100%);
 }
 
 /* navigation styling */
@@ -73,6 +77,8 @@ nav .nav-mobile {
   width: 25px;
   height: 25px;
   transform: scale(-1, -1);
+  filter: var(--filter);
+  -webkit-filter: var(--webkit-filter);
 }
 
 .logo p {
